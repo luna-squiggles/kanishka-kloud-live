@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-24">
           <a href="https://kloud.allhandsontech.uk" className="flex items-center h-full">
             <img
-              src="/src/data/logo.webp"
+              src="/images/logo.webp"
               alt="Kanishka Kloud"
               className="h-24 w-auto"
             />
