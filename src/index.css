@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono&display=swap');
 
+@font-face {
+  font-family: 'PPTelegraf';
+  src: url('/src/data/PPTelegraf-Ultrabold-BF6417cecc5b1d9.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -91,13 +91,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center py-4 md:py-8">
-      <div className="fixed top-4 right-4 z-20">
-        <h1 className="text-4xl md:text-5xl max-md:landscape:text-3xl font-heading font-medium leading-tight text-right">
-          <div>Kanishka</div>
-          <div>Kloud</div>
-        </h1>
-      </div>
-
       {!selectedMP && (
         <div className="fixed inset-0 flex flex-col items-center justify-center max-md:landscape:justify-start max-md:landscape:pt-4 z-10" style={{ pointerEvents: 'none' }}>
           <div className="w-full max-w-2xl mx-auto px-4 mt-44 md:mt-0" style={{ pointerEvents: 'auto' }}>
