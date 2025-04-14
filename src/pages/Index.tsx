@@ -94,6 +94,17 @@ const Index = () => {
       {!selectedMP && (
         <div className="fixed inset-0 flex flex-col items-center justify-center max-md:landscape:justify-start max-md:landscape:pt-4 z-10" style={{ pointerEvents: 'none' }}>
           <div className="w-full max-w-2xl mx-auto px-4 mt-44 md:mt-0" style={{ pointerEvents: 'auto' }}>
+            <div className="mb-8 text-center">
+              <p className="text-lg text-gray-700 mb-4">
+                Kanishka Kloud was built by Kanishka and his team to show his constituents what fighting for the Vale of Glamorgan looks like in Parliament. It maps the most-used words in his speeches since election day. He later scaled it to cover all MPs to highlight the role tech can play in boosting transparency in democracy.
+              </p>
+              <button
+                onClick={() => window.open('https://twitter.com/KanishkaNarayan', '_blank')}
+                className="inline-flex items-center px-4 py-2 bg-[#DB2650] text-white rounded-md hover:bg-[#DB2650]/90 transition-colors"
+              >
+                See how it was built here
+              </button>
+            </div>
             <SearchBox onSelectMP={handleSelectMP} isLoading={loading} isCollapsed={false} />
           </div>
         </div>
@@ -126,7 +137,7 @@ const Index = () => {
       )}
 
       <Link
-        to="/about"
+        to="/about-kloud"
         className="fixed left-4 bottom-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-30"
         aria-label="About this site"
       >
