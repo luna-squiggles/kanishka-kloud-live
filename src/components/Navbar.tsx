@@ -91,65 +91,65 @@ export default function Navbar() {
             <div className="relative" ref={desktopAboutRef}>
               <button
                 onClick={handleAboutClick}
-                className={`font-ultrabold hover:text-black/80 transition-colors flex items-center ${
+                className={`font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between ${
                   isAboutActive ? 'text-black' : 'text-white'
                 }`}
               >
                 About
-                <ChevronDown size={20} className={`ml-1 transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown size={20} className={`transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`} />
               </button>
               {isAboutOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-[#DB2650] rounded-lg shadow-lg py-2">
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                   <a
-                    href="https://allhandsontech.uk/about"
-                    className="block px-4 py-2 text-white hover:bg-[#DB2650]/90 transition-colors font-ultrabold"
+                    href="https://allhandsontech.uk"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     The Campaign
                   </a>
                   <a
-                    href="https://allhandsontech.uk/our-team"
-                    className="block px-4 py-2 text-white hover:bg-[#DB2650]/90 transition-colors font-ultrabold"
+                    href="https://allhandsontech.uk"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Our Team
                   </a>
                 </div>
               )}
             </div>
-            <a
-              href="https://allhandsontech.uk/vale-accelerator"
-              className="font-ultrabold hover:text-black/80 transition-colors text-white"
-            >
-              Vale Accelerator
-            </a>
-            <a
-              href="https://allhandsontech.uk/tech-trainee"
-              className="font-ultrabold hover:text-black/80 transition-colors text-white"
-            >
-              Tech Trainee
-            </a>
             <div className="relative" ref={desktopToolsRef}>
               <button
                 onClick={handleToolsClick}
-                className={`font-ultrabold hover:text-black/80 transition-colors flex items-center ${
-                  isToolsSubsectionActive ? 'text-black' : 'text-black'
+                className={`font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between ${
+                  isToolsSubsectionActive ? 'text-black' : 'text-white'
                 }`}
               >
                 Tools
-                <ChevronDown size={20} className={`ml-1 transition-transform duration-200 ${isToolsOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown size={20} className={`transition-transform duration-200 ${isToolsOpen ? 'rotate-180' : ''}`} />
               </button>
               {isToolsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-[#DB2650] rounded-lg shadow-lg py-2">
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                   <a
-                    href="https://kloud.allhandsontech.uk"
-                    className="block px-4 py-2 text-black hover:bg-[#DB2650]/90 transition-colors font-ultrabold"
+                    href="https://allhandsontech.uk"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    Kanishka Kloud
+                    Vale Accelerator
+                  </a>
+                  <a
+                    href="https://allhandsontech.uk"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Tech Trainee
+                  </a>
+                  <a
+                    href="https://allhandsontech.uk"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Kloud
                   </a>
                 </div>
               )}
             </div>
             <a
-              href="https://allhandsontech.uk/podcast"
+              href="https://allhandsontech.uk"
               className="font-ultrabold hover:text-black/80 transition-colors text-white"
             >
               Podcast
@@ -184,14 +184,14 @@ export default function Navbar() {
               {isAboutOpen && (
                 <div className="pl-4 mt-2 space-y-2">
                   <a
-                    href="https://allhandsontech.uk/about"
+                    href="https://allhandsontech.uk"
                     className="block font-ultrabold hover:text-black/80 transition-colors text-white"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     The Campaign
                   </a>
                   <a
-                    href="https://allhandsontech.uk/our-team"
+                    href="https://allhandsontech.uk"
                     className="block font-ultrabold hover:text-black/80 transition-colors text-white"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -200,25 +200,11 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <a
-              href="https://allhandsontech.uk/vale-accelerator"
-              className="block font-ultrabold hover:text-black/80 transition-colors text-white"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Vale Accelerator
-            </a>
-            <a
-              href="https://allhandsontech.uk/tech-trainee"
-              className="block font-ultrabold hover:text-black/80 transition-colors text-white"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Tech Trainee
-            </a>
             <div className="relative" ref={mobileToolsRef}>
               <button
                 onClick={handleToolsClick}
                 className={`block w-full text-left font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between ${
-                  isToolsSubsectionActive ? 'text-black' : 'text-black'
+                  isToolsSubsectionActive ? 'text-black' : 'text-white'
                 }`}
               >
                 Tools
@@ -227,17 +213,31 @@ export default function Navbar() {
               {isToolsOpen && (
                 <div className="pl-4 mt-2 space-y-2">
                   <a
-                    href="https://kloud.allhandsontech.uk"
-                    className="block font-ultrabold hover:text-black/80 transition-colors text-black"
+                    href="https://allhandsontech.uk"
+                    className="block font-ultrabold hover:text-black/80 transition-colors text-white"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Kanishka Kloud
+                    Vale Accelerator
+                  </a>
+                  <a
+                    href="https://allhandsontech.uk"
+                    className="block font-ultrabold hover:text-black/80 transition-colors text-white"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Tech Trainee
+                  </a>
+                  <a
+                    href="https://allhandsontech.uk"
+                    className="block font-ultrabold hover:text-black/80 transition-colors text-white"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Kloud
                   </a>
                 </div>
               )}
             </div>
             <a
-              href="https://allhandsontech.uk/podcast"
+              href="https://allhandsontech.uk"
               className="block font-ultrabold hover:text-black/80 transition-colors text-white"
               onClick={() => setIsMenuOpen(false)}
             >
