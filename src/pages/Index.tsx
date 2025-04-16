@@ -16,7 +16,7 @@ const Index = () => {
   const [noSpeechesMessage, setNoSpeechesMessage] = useState<string | null>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScrollingEnabled, setIsScrollingEnabled] = useState(false);
-  const SCROLL_THRESHOLD = 300; // Increased from 100 to 300
+  const SCROLL_THRESHOLD = 150; // Reduced from 300 to 150
 
   useEffect(() => {
     const handleScroll = (e: WheelEvent) => {
@@ -143,17 +143,20 @@ const Index = () => {
                 <p className="text-lg text-gray-700 mb-4">
                   Kanishka Kloud was built by Kanishka and his team to show his constituents what fighting for the Vale of Glamorgan looks like in Parliament. It maps the most-used words in his speeches since election day. He later scaled it to cover all MPs to highlight the role tech can play in boosting transparency in democracy.
                 </p>
+                <a
+                  href="https://x.com/KanishkaNarayan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 py-2 bg-[#DB2650] text-white rounded-full hover:bg-[#DB2650]/90 transition-colors mb-4"
+                >
+                  See how it was built here
+                </a>
               </div>
-              <div className="flex flex-col items-center gap-4">
-                <div className="w-32 h-1 bg-gray-200 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-[#DB2650] transition-all duration-300"
-                    style={{ width: `${(scrollPosition / SCROLL_THRESHOLD) * 100}%` }}
-                  />
-                </div>
+              <div className="flex flex-col items-center gap-2">
                 <div className="flex justify-center animate-bounce">
                   <ChevronDown className="w-8 h-8 text-[#DB2650]" />
                 </div>
+                <p className="text-sm text-gray-500">Scroll for more</p>
               </div>
             </div>
           </div>
@@ -164,6 +167,9 @@ const Index = () => {
             }`}
           >
             <div className="w-full max-w-2xl mx-auto px-4">
+              <div className="mb-8 text-center">
+                <h1 className="font-['PPTelegraf'] text-3xl font-bold text-[#DB2650]">Kanishka Kloud</h1>
+              </div>
               <SearchBox onSelectMP={handleSelectMP} isLoading={loading} isCollapsed={false} />
             </div>
           </div>
