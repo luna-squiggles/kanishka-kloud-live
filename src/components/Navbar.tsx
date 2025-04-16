@@ -121,6 +121,12 @@ export default function Navbar() {
             >
               Vale Accelerator
             </a>
+            <a
+              href="https://allhandsontech.uk/tech-trainee"
+              className="font-ultrabold hover:text-black/80 transition-colors text-white"
+            >
+              Tech Trainee
+            </a>
             <div className="relative" ref={desktopToolsRef}>
               <button
                 onClick={handleToolsClick}
@@ -200,6 +206,13 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               Vale Accelerator
+            </a>
+            <a
+              href="https://allhandsontech.uk/tech-trainee"
+              className="block font-ultrabold hover:text-black/80 transition-colors text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Tech Trainee
             </a>
             <div className="relative" ref={mobileToolsRef}>
               <button

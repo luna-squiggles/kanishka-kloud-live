@@ -1,6 +1,6 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Info, Download, Twitter } from "lucide-react";
+import { Info, Download, Twitter, ChevronDown } from "lucide-react";
 import SearchBox from "@/components/SearchBox";
 import MPProfile from "@/components/MPProfile";
 import WordCloud, { WordCloudRef } from "@/components/WordCloud";
@@ -14,6 +14,45 @@ const Index = () => {
   const [wordCloudData, setWordCloudData] = useState<WordCloudItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [noSpeechesMessage, setNoSpeechesMessage] = useState<string | null>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isScrollingEnabled, setIsScrollingEnabled] = useState(false);
+  const SCROLL_THRESHOLD = 300; // Increased from 100 to 300
+
+  useEffect(() => {
+    const handleScroll = (e: WheelEvent) => {
+      if (!isScrollingEnabled) {
+        e.preventDefault();
+        const newScrollPosition = Math.min(scrollPosition + Math.abs(e.deltaY), SCROLL_THRESHOLD);
+        setScrollPosition(newScrollPosition);
+        
+        if (newScrollPosition >= SCROLL_THRESHOLD) {
+          setIsScrollingEnabled(true);
+        }
+        return;
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isScrollingEnabled) {
+        e.preventDefault();
+        const newScrollPosition = Math.min(scrollPosition + 10, SCROLL_THRESHOLD);
+        setScrollPosition(newScrollPosition);
+        
+        if (newScrollPosition >= SCROLL_THRESHOLD) {
+          setIsScrollingEnabled(true);
+        }
+        return;
+      }
+    };
+
+    window.addEventListener('wheel', handleScroll, { passive: false });
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    
+    return () => {
+      window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, [isScrollingEnabled, scrollPosition]);
 
   const handleSelectMP = async (mp: MP) => {
     setSelectedMP(mp);
@@ -92,22 +131,43 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center py-4 md:py-8">
       {!selectedMP && (
-        <div className="fixed inset-0 flex flex-col items-center justify-center max-md:landscape:justify-start max-md:landscape:pt-4 z-10" style={{ pointerEvents: 'none' }}>
-          <div className="w-full max-w-2xl mx-auto px-4 mt-44 md:mt-0" style={{ pointerEvents: 'auto' }}>
-            <div className="mb-8 text-center">
-              <p className="text-lg text-gray-700 mb-4">
-                Kanishka Kloud was built by Kanishka and his team to show his constituents what fighting for the Vale of Glamorgan looks like in Parliament. It maps the most-used words in his speeches since election day. He later scaled it to cover all MPs to highlight the role tech can play in boosting transparency in democracy.
-              </p>
-              <button
-                onClick={() => window.open('https://twitter.com/KanishkaNarayan', '_blank')}
-                className="inline-flex items-center px-4 py-2 bg-[#DB2650] text-white rounded-md hover:bg-[#DB2650]/90 transition-colors"
-              >
-                See how it was built here
-              </button>
+        <>
+          <div 
+            className={`fixed inset-0 flex flex-col items-center justify-center max-md:landscape:justify-start max-md:landscape:pt-4 z-10 transition-all duration-500 ${
+              scrollPosition >= SCROLL_THRESHOLD ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
+          >
+            <div className="w-full max-w-2xl mx-auto px-4 mt-44 md:mt-0">
+              <div className="mb-8 text-center">
+                <h1 className="font-['PPTelegraf'] text-3xl font-bold text-[#DB2650] mb-4">Kanishka Kloud</h1>
+                <p className="text-lg text-gray-700 mb-4">
+                  Kanishka Kloud was built by Kanishka and his team to show his constituents what fighting for the Vale of Glamorgan looks like in Parliament. It maps the most-used words in his speeches since election day. He later scaled it to cover all MPs to highlight the role tech can play in boosting transparency in democracy.
+                </p>
+              </div>
+              <div className="flex flex-col items-center gap-4">
+                <div className="w-32 h-1 bg-gray-200 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-[#DB2650] transition-all duration-300"
+                    style={{ width: `${(scrollPosition / SCROLL_THRESHOLD) * 100}%` }}
+                  />
+                </div>
+                <div className="flex justify-center animate-bounce">
+                  <ChevronDown className="w-8 h-8 text-[#DB2650]" />
+                </div>
+              </div>
             </div>
-            <SearchBox onSelectMP={handleSelectMP} isLoading={loading} isCollapsed={false} />
           </div>
-        </div>
+
+          <div 
+            className={`fixed inset-0 flex items-center justify-center transition-all duration-500 ${
+              scrollPosition >= SCROLL_THRESHOLD ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}
+          >
+            <div className="w-full max-w-2xl mx-auto px-4">
+              <SearchBox onSelectMP={handleSelectMP} isLoading={loading} isCollapsed={false} />
+            </div>
+          </div>
+        </>
       )}
 
       {selectedMP && (

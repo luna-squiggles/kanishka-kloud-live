@@ -5,9 +5,6 @@ import { Facebook, Instagram } from "lucide-react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
-import OurTeam from "./pages/OurTeam";
-import ValeAccelerator from "./pages/ValeAccelerator";
-import Podcast from "./pages/Podcast";
 import Navbar from "./components/Navbar";
 
 const queryClient = new QueryClient();
@@ -22,9 +19,6 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about-kloud" element={<About />} />
-              <Route path="/our-team" element={<OurTeam />} />
-              <Route path="/vale-accelerator" element={<ValeAccelerator />} />
-              <Route path="/podcast" element={<Podcast />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
