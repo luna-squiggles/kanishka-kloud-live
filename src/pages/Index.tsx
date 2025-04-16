@@ -156,7 +156,7 @@ const Index = () => {
                 <div className="flex justify-center animate-bounce">
                   <ChevronDown className="w-8 h-8 text-[#DB2650]" />
                 </div>
-                <p className="text-sm text-gray-500">Scroll for more</p>
+                <p className="text-sm text-gray-500">Scroll to use the tool</p>
               </div>
             </div>
           </div>
