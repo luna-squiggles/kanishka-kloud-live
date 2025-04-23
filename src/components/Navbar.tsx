@@ -85,7 +85,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8 pr-8 font-['PPTelegraf']">
             <a
-              href="https://allhandsontech.uk"
+              href="https://allhandsontech.uk/"
               className="font-ultrabold hover:text-black/80 transition-colors text-white"
             >
               Home
@@ -101,13 +101,13 @@ export default function Navbar() {
               {isAboutOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                   <a
-                    href="https://allhandsontech.uk"
+                    href="https://allhandsontech.uk/about"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     The Campaign
                   </a>
                   <a
-                    href="https://allhandsontech.uk"
+                    href="https://allhandsontech.uk/our-team"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Our Team
@@ -116,13 +116,13 @@ export default function Navbar() {
               )}
             </div>
             <a
-              href="https://allhandsontech.uk"
+              href="https://allhandsontech.uk/vale-accelerator"
               className="font-ultrabold hover:text-black/80 transition-colors text-white"
             >
               Vale Accelerator
             </a>
             <a
-              href="https://allhandsontech.uk"
+              href="https://allhandsontech.uk/tech-trainee"
               className="font-ultrabold hover:text-black/80 transition-colors text-white"
             >
               Tech Trainee
@@ -138,7 +138,7 @@ export default function Navbar() {
               {isToolsOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                   <a
-                    href="https://allhandsontech.uk"
+                    href="https://allhandsontech.uk/"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Kloud
@@ -147,7 +147,7 @@ export default function Navbar() {
               )}
             </div>
             <a
-              href="https://allhandsontech.uk"
+              href="https://allhandsontech.uk/"
               className="font-ultrabold hover:text-black/80 transition-colors text-white"
             >
               Podcast
@@ -163,7 +163,7 @@ export default function Navbar() {
         >
           <nav className="pb-4 space-y-4 px-4 bg-[#DB2650] font-['PPTelegraf']">
             <a
-              href="https://allhandsontech.uk"
+              href="https://allhandsontech.uk/"
               className="block font-ultrabold hover:text-black/80 transition-colors text-white"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -180,14 +180,14 @@ export default function Navbar() {
               {isAboutOpen && (
                 <div className="pl-4 mt-2 space-y-2">
                   <a
-                    href="https://allhandsontech.uk"
+                    href="https://allhandsontech.uk/about"
                     className="block font-ultrabold hover:text-black/80 transition-colors text-white"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     The Campaign
                   </a>
                   <a
-                    href="https://allhandsontech.uk"
+                    href="https://allhandsontech.uk/our-team"
                     className="block font-ultrabold hover:text-black/80 transition-colors text-white"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -197,14 +197,14 @@ export default function Navbar() {
               )}
             </div>
             <a
-              href="https://allhandsontech.uk"
+              href="https://allhandsontech.uk/vale-accelerator"
               className="block font-ultrabold hover:text-black/80 transition-colors text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               Vale Accelerator
             </a>
             <a
-              href="https://allhandsontech.uk"
+              href="https://allhandsontech.uk/tech-trainee"
               className="block font-ultrabold hover:text-black/80 transition-colors text-white"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -221,7 +221,7 @@ export default function Navbar() {
               {isToolsOpen && (
                 <div className="pl-4 mt-2 space-y-2">
                   <a
-                    href="https://allhandsontech.uk"
+                    href="https://allhandsontech.uk/"
                     className="block font-ultrabold hover:text-black/80 transition-colors text-white"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -231,7 +231,7 @@ export default function Navbar() {
               )}
             </div>
             <a
-              href="https://allhandsontech.uk"
+              href="https://allhandsontech.uk/"
               className="block font-ultrabold hover:text-black/80 transition-colors text-white"
               onClick={() => setIsMenuOpen(false)}
             >
