@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Menu, ChevronDown } from 'lucide-react';
 import { NavLink, useLocation } from 'react-router-dom';
 
@@ -14,19 +14,6 @@ export default function Navbar() {
   const mobileAboutRef = React.useRef<HTMLDivElement>(null);
   const mobileToolsRef = React.useRef<HTMLDivElement>(null);
 
-  // Close other dropdowns when one is opened
-  const handleAboutClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsAboutOpen(!isAboutOpen);
-    setIsToolsOpen(false);
-  };
-
-  const handleToolsClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsToolsOpen(!isToolsOpen);
-    setIsAboutOpen(false);
-  };
-
   // Check if a subsection is active
   const isAboutSubsectionActive = (path: string) => {
     return location.pathname === path;
@@ -35,8 +22,23 @@ export default function Navbar() {
   const isAboutActive = location.pathname === '/about-kloud' || isAboutSubsectionActive('/our-team');
   const isToolsSubsectionActive = location.pathname === '/kloud';
 
+  const handleAboutClick = () => {
+    setIsAboutOpen(!isAboutOpen);
+    setIsToolsOpen(false);
+  };
+
+  const handleToolsClick = () => {
+    setIsToolsOpen(!isToolsOpen);
+    setIsAboutOpen(false);
+  };
+
+  const handleInfoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open('https://allhandsontech.uk/about', '_blank');
+  };
+
   // Handle clicks outside dropdowns
-  React.useEffect(() => {
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       
@@ -91,9 +93,7 @@ export default function Navbar() {
             <div className="relative" ref={desktopAboutRef}>
               <button
                 onClick={handleAboutClick}
-                className={`font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between ${
-                  isAboutActive ? 'text-black' : 'text-white'
-                }`}
+                className="font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between text-white"
               >
                 About
                 <ChevronDown size={20} className={`transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`} />
@@ -115,30 +115,28 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+            <a
+              href="https://allhandsontech.uk"
+              className="font-ultrabold hover:text-black/80 transition-colors text-white"
+            >
+              Vale Accelerator
+            </a>
+            <a
+              href="https://allhandsontech.uk"
+              className="font-ultrabold hover:text-black/80 transition-colors text-white"
+            >
+              Tech Trainee
+            </a>
             <div className="relative" ref={desktopToolsRef}>
               <button
                 onClick={handleToolsClick}
-                className={`font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between ${
-                  isToolsSubsectionActive ? 'text-black' : 'text-white'
-                }`}
+                className="font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between text-black"
               >
                 Tools
                 <ChevronDown size={20} className={`transition-transform duration-200 ${isToolsOpen ? 'rotate-180' : ''}`} />
               </button>
               {isToolsOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                  <a
-                    href="https://allhandsontech.uk"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Vale Accelerator
-                  </a>
-                  <a
-                    href="https://allhandsontech.uk"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Tech Trainee
-                  </a>
                   <a
                     href="https://allhandsontech.uk"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -174,9 +172,7 @@ export default function Navbar() {
             <div className="relative" ref={mobileAboutRef}>
               <button
                 onClick={handleAboutClick}
-                className={`block w-full text-left font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between ${
-                  isAboutActive ? 'text-black' : 'text-white'
-                }`}
+                className="block w-full text-left font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between text-white"
               >
                 About
                 <ChevronDown size={20} className={`transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`} />
@@ -200,32 +196,30 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+            <a
+              href="https://allhandsontech.uk"
+              className="block font-ultrabold hover:text-black/80 transition-colors text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Vale Accelerator
+            </a>
+            <a
+              href="https://allhandsontech.uk"
+              className="block font-ultrabold hover:text-black/80 transition-colors text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Tech Trainee
+            </a>
             <div className="relative" ref={mobileToolsRef}>
               <button
                 onClick={handleToolsClick}
-                className={`block w-full text-left font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between ${
-                  isToolsSubsectionActive ? 'text-black' : 'text-white'
-                }`}
+                className="block w-full text-left font-ultrabold hover:text-black/80 transition-colors flex items-center justify-between text-black"
               >
                 Tools
                 <ChevronDown size={20} className={`transition-transform duration-200 ${isToolsOpen ? 'rotate-180' : ''}`} />
               </button>
               {isToolsOpen && (
                 <div className="pl-4 mt-2 space-y-2">
-                  <a
-                    href="https://allhandsontech.uk"
-                    className="block font-ultrabold hover:text-black/80 transition-colors text-white"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Vale Accelerator
-                  </a>
-                  <a
-                    href="https://allhandsontech.uk"
-                    className="block font-ultrabold hover:text-black/80 transition-colors text-white"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Tech Trainee
-                  </a>
                   <a
                     href="https://allhandsontech.uk"
                     className="block font-ultrabold hover:text-black/80 transition-colors text-white"
