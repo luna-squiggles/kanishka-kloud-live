@@ -138,7 +138,7 @@ export default function Navbar() {
               {isToolsOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                   <a
-                    href="https://allhandsontech.uk/"
+                    href="https://kloud.allhandsontech.uk"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Kloud
@@ -221,7 +221,7 @@ export default function Navbar() {
               {isToolsOpen && (
                 <div className="pl-4 mt-2 space-y-2">
                   <a
-                    href="https://allhandsontech.uk/"
+                    href="https://kloud.allhandsontech.uk"
                     className="block font-ultrabold hover:text-black/80 transition-colors text-white"
                     onClick={() => setIsMenuOpen(false)}
                   >
