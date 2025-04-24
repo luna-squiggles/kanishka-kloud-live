@@ -290,7 +290,7 @@ const WordCloud = forwardRef<WordCloudRef, WordCloudProps>(({ words, loading }, 
         const values = words.map((word) => word.value);
         const minValue = Math.min(...values);
         const maxValue = Math.max(...values);
-        const significanceThreshold = minValue + (maxValue - maxValue) * 0.3;
+        const significanceThreshold = minValue + (maxValue - minValue) * 0.3;
 
         const placedWords: Array<{ word: WordCloudItem; x: number; y: number; fontSize: number }> = [];
         const placedRects: Array<{ x: number; y: number; width: number; height: number }> = [];
@@ -304,7 +304,7 @@ const WordCloud = forwardRef<WordCloudRef, WordCloudProps>(({ words, loading }, 
         // Helper function to check if a rectangle overlaps with existing ones
         const checkOverlap = (rect: { x: number; y: number; width: number; height: number }) => {
           return placedRects.some(placed => {
-            const padding = Math.min(12, rect.width * 0.12);
+            const padding = Math.min(8, rect.width * 0.1); // Reduced padding for tighter packing
             return !(
               rect.x + rect.width + padding < placed.x ||
               rect.x > placed.x + placed.width + padding ||
@@ -323,7 +323,7 @@ const WordCloud = forwardRef<WordCloudRef, WordCloudProps>(({ words, loading }, 
             { x: x + wordWidth/2, y: y + wordHeight/2 }
           ];
 
-          const safetyMargin = 0.98;
+          const safetyMargin = 0.95; // Slightly reduced margin to allow more words
 
           return corners.every(corner => {
             const normalizedX = (corner.x - centerX) / (ovalRadiusX * safetyMargin);
@@ -334,7 +334,7 @@ const WordCloud = forwardRef<WordCloudRef, WordCloudProps>(({ words, loading }, 
 
         // Function to check if a word is away from edges with proper padding
         const isAwayFromEdges = (rect: { x: number; y: number; width: number; height: number }) => {
-          const edgePadding = 35;
+          const edgePadding = 25; // Reduced edge padding
           return (
             rect.x >= edgePadding &&
             rect.y >= edgePadding &&
@@ -352,7 +352,7 @@ const WordCloud = forwardRef<WordCloudRef, WordCloudProps>(({ words, loading }, 
 
           let placed = false;
           let attempts = 0;
-          const maxAttempts = 300; // Increased from 200
+          const maxAttempts = 2000; // Increased to match display version
           let finalX = 0;
           let finalY = 0;
           let spiralAngle = Math.random() * Math.PI * 2;
@@ -372,10 +372,11 @@ const WordCloud = forwardRef<WordCloudRef, WordCloudProps>(({ words, loading }, 
               height: wordHeight
             };
 
-            // Adjust padding based on word size
-            const basePadding = 35;
-            const sizeFactor = Math.min(1, wordWidth / 200); // Normalize word size
-            const adjustedPadding = basePadding * (1 - sizeFactor * 0.3); // Reduce padding for larger words
+            // Adjust padding based on word size and importance
+            const basePadding = 25;
+            const sizeFactor = Math.min(1, wordWidth / 200);
+            const importanceFactor = (word.value - minValue) / (maxValue - minValue);
+            const adjustedPadding = basePadding * (1 - sizeFactor * 0.3) * (1 - importanceFactor * 0.5);
 
             if (isWithinOvalBoundary(x, y, wordWidth, wordHeight) && 
                 isAwayFromEdges(rect) && 

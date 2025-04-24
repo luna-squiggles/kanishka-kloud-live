@@ -31,6 +31,24 @@ const PARLIAMENT_STOPWORDS = new Set([
 // Combine all stopwords
 const ALL_STOPWORDS = new Set([...STOPWORDS, ...PARLIAMENT_STOPWORDS]);
 
+// Function to get the singular form of a word
+const getSingularForm = (word: string): string => {
+  // Common plural to singular conversions
+  if (word.endsWith('ies')) {
+    return word.slice(0, -3) + 'y';
+  }
+  if (word.endsWith('es')) {
+    // Check if it's a word that ends with 'es' in singular form
+    if (['missiles', 'buses', 'boxes', 'foxes'].includes(word)) {
+      return word.slice(0, -2);
+    }
+  }
+  if (word.endsWith('s')) {
+    return word.slice(0, -1);
+  }
+  return word;
+};
+
 /**
  * Process speeches into word frequency map
  * Can handle both regular speech texts and our special format
@@ -48,7 +66,16 @@ export const processSpeeches = (speeches: string[]): Map<string, number> => {
       .filter(word => word.length > 2 && !ALL_STOPWORDS.has(word));
     
     words.forEach(word => {
-      wordCounts.set(word, (wordCounts.get(word) || 0) + 1);
+      // Get the singular form of the word
+      const singularForm = getSingularForm(word);
+      
+      // If the word is already in the map, increment its count
+      if (wordCounts.has(singularForm)) {
+        wordCounts.set(singularForm, (wordCounts.get(singularForm) || 0) + 1);
+      } else {
+        // Otherwise, add it to the map
+        wordCounts.set(singularForm, 1);
+      }
     });
   });
   
