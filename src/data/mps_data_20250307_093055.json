@@ -720,14 +720,6 @@
         "twitter_handle": null
     },
     {
-        "name": "Sir Alan Campbell",
-        "person_id": "uk.org.publicwhip/person/529",
-        "party_affiliation": "Labour",
-        "constituency": "Tynemouth",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/529/Portrait?cropType=OneOne",
-        "twitter_handle": "alancampbellmp"
-    },
-    {
         "name": "Mr Gregory Campbell",
         "person_id": "uk.org.publicwhip/person/10780",
         "party_affiliation": "Democratic Unionist Party",
@@ -1136,14 +1128,6 @@
         "twitter_handle": "JanetDaby"
     },
     {
-        "name": "Sir Nicholas Dakin",
-        "person_id": "uk.org.publicwhip/person/24798",
-        "party_affiliation": "Labour",
-        "constituency": "Scunthorpe",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4056/Portrait?cropType=OneOne",
-        "twitter_handle": null
-    },
-    {
         "name": "Ashley Dalton",
         "person_id": "uk.org.publicwhip/person/26123",
         "party_affiliation": "Labour",
@@ -1272,14 +1256,6 @@
         "twitter_handle": null
     },
     {
-        "name": "Kate Dearden",
-        "person_id": "uk.org.publicwhip/person/26548",
-        "party_affiliation": "Labour (Co-op)",
-        "constituency": "Halifax",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/5224/Portrait?cropType=OneOne",
-        "twitter_handle": "Kate_Dearden"
-    },
-    {
         "name": "Carla Denyer",
         "person_id": "uk.org.publicwhip/person/26379",
         "party_affiliation": "Green Party",
@@ -1334,14 +1310,6 @@
         "constituency": "Shipley",
         "portrait_URL": "https://members-api.parliament.uk/api/members/5281/Portrait?cropType=OneOne",
         "twitter_handle": "annalouisedixon"
-    },
-    {
-        "name": "Samantha Dixon",
-        "person_id": "uk.org.publicwhip/person/null",
-        "party_affiliation": "Labour",
-        "constituency": "Chester North and Neston",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4976/Portrait?cropType=OneOne",
-        "twitter_handle": "samanthadixonmp"
     },
     {
         "name": "Anneliese Dodds",
@@ -1518,14 +1486,6 @@
         "constituency": "Ribble Valley",
         "portrait_URL": "https://members-api.parliament.uk/api/members/5228/Portrait?cropType=OneOne",
         "twitter_handle": null
-    },
-    {
-        "name": "Chris Elmore",
-        "person_id": "uk.org.publicwhip/person/25490",
-        "party_affiliation": "Labour",
-        "constituency": "Bridgend",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4572/Portrait?cropType=OneOne",
-        "twitter_handle": "cpjelmore"
     },
     {
         "name": "Kirith Entwistle",
@@ -1710,14 +1670,6 @@
         "constituency": "Bridgwater",
         "portrait_URL": "https://members-api.parliament.uk/api/members/5101/Portrait?cropType=OneOne",
         "twitter_handle": "Ashley7Fox"
-    },
-    {
-        "name": "Vicky Foxcroft",
-        "person_id": "uk.org.publicwhip/person/25380",
-        "party_affiliation": "Labour",
-        "constituency": "Lewisham North",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4491/Portrait?cropType=OneOne",
-        "twitter_handle": "vickyfoxcroft"
     },
     {
         "name": "Mary Kelly Foy",
@@ -2488,14 +2440,6 @@
         "twitter_handle": "darrenpjones"
     },
     {
-        "name": "Gerald Jones",
-        "person_id": "uk.org.publicwhip/person/4501",
-        "party_affiliation": "Labour",
-        "constituency": "Merthyr Tydfil and Aberdare",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4501/Portrait?cropType=OneOne",
-        "twitter_handle": null
-    },
-    {
         "name": "Lillian Jones",
         "person_id": "uk.org.publicwhip/person/26327",
         "party_affiliation": "Labour",
@@ -2638,14 +2582,6 @@
         "constituency": "Truro and Falmouth",
         "portrait_URL": "https://members-api.parliament.uk/api/members/5279/Portrait?cropType=OneOne",
         "twitter_handle": "jaynekirkham4"
-    },
-    {
-        "name": "Gen Kitchen",
-        "person_id": "uk.org.publicwhip/person/5011",
-        "party_affiliation": "Labour",
-        "constituency": "Wellingborough and Rushden",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/5011/Portrait?cropType=OneOne",
-        "twitter_handle": "Gen_Kitchen_MP"
     },
     {
         "name": "Mr Paul Kohler",
@@ -3008,14 +2944,6 @@
         "twitter_handle": "PaulMaskeyMP"
     },
     {
-        "name": "Keir Mather",
-        "person_id": "uk.org.publicwhip/person/4993",
-        "party_affiliation": "Labour",
-        "constituency": "Selby",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4993/Portrait?cropType=OneOne",
-        "twitter_handle": "Mather_Keir"
-    },
-    {
         "name": "Brian Mathew",
         "person_id": "uk.org.publicwhip/person/26509",
         "party_affiliation": "Liberal Democrat",
@@ -3062,14 +2990,6 @@
         "constituency": "Bristol East",
         "portrait_URL": "https://members-api.parliament.uk/api/members/1491/Portrait?cropType=OneOne",
         "twitter_handle": "KerryMP"
-    },
-    {
-        "name": "Martin McCluskey",
-        "person_id": "uk.org.publicwhip/person/26427",
-        "party_affiliation": "Labour",
-        "constituency": "Inverclyde and Renfrewshire West",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/5129/Portrait?cropType=OneOne",
-        "twitter_handle": "martinmccluskey"
     },
     {
         "name": "Dame Siobhain McDonagh",
@@ -3174,14 +3094,6 @@
         "constituency": "Oldham West, Chadderton and Royton",
         "portrait_URL": "https://members-api.parliament.uk/api/members/4569/Portrait?cropType=OneOne",
         "twitter_handle": "JimfromOldham"
-    },
-    {
-        "name": "Anna McMorrin",
-        "person_id": "uk.org.publicwhip/person/4632",
-        "party_affiliation": "Labour",
-        "constituency": "Cardiff North",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4632/Portrait?cropType=OneOne",
-        "twitter_handle": "annamcmorrin"
     },
     {
         "name": "James McMurdock",
@@ -3678,14 +3590,6 @@
         "constituency": "Chatham and Aylesford",
         "portrait_URL": "https://members-api.parliament.uk/api/members/5220/Portrait?cropType=OneOne",
         "twitter_handle": "cllrtrisosborne"
-    },
-    {
-        "name": "Taiwo Owatemi",
-        "person_id": "uk.org.publicwhip/person/4779",
-        "party_affiliation": "Labour",
-        "constituency": "Coventry North West",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4779/Portrait?cropType=OneOne",
-        "twitter_handle": "TaiwoOwatemi"
     },
     {
         "name": "Sarah Owen",
@@ -4352,14 +4256,6 @@
         "twitter_handle": "gregsmith_uk"
     },
     {
-        "name": "Jeff Smith",
-        "person_id": "uk.org.publicwhip/person/4456",
-        "party_affiliation": "Labour",
-        "constituency": "Manchester Withington",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4456/Portrait?cropType=OneOne",
-        "twitter_handle": "jeffsmithetc"
-    },
-    {
         "name": "Sir Julian Smith",
         "person_id": "uk.org.publicwhip/person/24961",
         "party_affiliation": "Conservative",
@@ -4624,14 +4520,6 @@
         "twitter_handle": "DesmondSwayne"
     },
     {
-        "name": "Mark Tami",
-        "person_id": "uk.org.publicwhip/person/1383",
-        "party_affiliation": "Labour",
-        "constituency": "Alyn and Deeside",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/1383/Portrait?cropType=OneOne",
-        "twitter_handle": "MarkTamiMP"
-    },
-    {
         "name": "Mike Tapp",
         "person_id": "uk.org.publicwhip/person/26605",
         "party_affiliation": "Labour",
@@ -4808,14 +4696,6 @@
         "twitter_handle": "tomtugendhat"
     },
     {
-        "name": "Anna Turley",
-        "person_id": "uk.org.publicwhip/person/25313",
-        "party_affiliation": "Labour (Co-op)",
-        "constituency": "Redcar",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4449/Portrait?cropType=OneOne",
-        "twitter_handle": null
-    },
-    {
         "name": "Matt Turmaine",
         "person_id": "uk.org.publicwhip/person/26417",
         "party_affiliation": "Labour",
@@ -4918,14 +4798,6 @@
         "constituency": "South Devon",
         "portrait_URL": "https://members-api.parliament.uk/api/members/5216/Portrait?cropType=OneOne",
         "twitter_handle": "carolinevoaden"
-    },
-    {
-        "name": "Christian Wakeford",
-        "person_id": "uk.org.publicwhip/person/25874",
-        "party_affiliation": "Labour",
-        "constituency": "Bury South",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4871/Portrait?cropType=OneOne",
-        "twitter_handle": null
     },
     {
         "name": "Imogen Walker",
