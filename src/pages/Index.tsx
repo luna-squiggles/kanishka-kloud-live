@@ -141,7 +141,7 @@ const Index = () => {
               <div className="mb-8 text-center">
                 <h1 className="font-['PPTelegraf'] text-3xl font-bold text-[#DB2650] mb-4">Kanishka Kloud</h1>
                 <p className="text-lg text-gray-700 mb-4">
-                  Kanishka Kloud was built by Kanishka and his team to show his constituents what fighting for the Vale of Glamorgan looks like in Parliament. It maps the most-used words in his speeches since election day. He later scaled it to cover all MPs to highlight the role tech can play in boosting transparency in democracy.
+                Kanishka Kloud was built by Kanishka and his team to show his constituents what fighting for the Vale of Glamorgan looks like in Parliament. It maps the most-used words in his speeches since election day. He later scaled it to cover all backbench MPs, to highlight the role tech can play in boosting transparency in democracy and showcasing how local champions are making their mark in Westminster.
                 </p>
                 <a
                   href="https://x.com/KanishkaNarayan"
