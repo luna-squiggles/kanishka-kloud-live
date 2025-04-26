@@ -1936,14 +1936,6 @@
         "twitter_handle": null
     },
     {
-        "name": "Carolyn Harris",
-        "person_id": "uk.org.publicwhip/person/25308",
-        "party_affiliation": "Labour",
-        "constituency": "Neath and Swansea East",
-        "portrait_URL": "https://members-api.parliament.uk/api/members/4480/Portrait?cropType=OneOne",
-        "twitter_handle": "carolynharris24"
-    },
-    {
         "name": "Rebecca Harris",
         "person_id": "uk.org.publicwhip/person/24731",
         "party_affiliation": "Conservative",
