@@ -171,6 +171,9 @@ const Index = () => {
                 <h1 className="font-['PPTelegraf'] text-3xl font-bold text-[#DB2650]">Kanishka Kloud</h1>
               </div>
               <SearchBox onSelectMP={handleSelectMP} isLoading={loading} isCollapsed={false} />
+              <p className="text-sm text-gray-500 text-center mt-2">
+                Note: Whips have been removed from the dataset, as their role limits their participation in debates and speeches.
+              </p>
             </div>
           </div>
         </>
@@ -181,6 +184,9 @@ const Index = () => {
           <div className="w-full max-w-2xl mx-auto px-4 mb-2 md:mb-4 mt-44 md:mt-24">
             <div className="animate-slide-up">
               <SearchBox onSelectMP={handleSelectMP} isLoading={loading} isCollapsed={true} />
+              <p className="text-sm text-gray-500 text-center mt-2">
+                Note: Whips have been removed from the dataset, as their role limits their participation in debates and speeches.
+              </p>
             </div>
           </div>
 
